@@ -1,3 +1,24 @@
-<p>
-  profile works!
-</p>
+<div class="container-profile">
+  <div class="content-profile">
+    <div class="content-profile-image">
+      <ion-avatar slot="start">
+        <img [alt]="alt" [src]="imageUrl" />
+      </ion-avatar>
+    </div>
+
+    <div class="content-profile-text">
+      <ion-title [innerText]="title"></ion-title>
+      <span [innerText]="level"></span>
+    </div>
+  </div>
+</div>
+<div class="content-items-profile">
+  <div class="content-items-profile-icon">
+    <ion-icon name="accessibility-outline"></ion-icon>
+    <span>MEU CORPO</span>
+  </div>
+  <div class="content-items-profile-icon">
+    <ion-icon name="trophy-outline"></ion-icon>
+    <span>OBJETIVOS E CONQUISTAS</span>
+  </div>
+</div>
