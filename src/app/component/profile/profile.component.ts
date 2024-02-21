@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent  implements OnInit {
+  title: string = 'Joao Junior';
+  level: string = 'Nivel Roxo';
+  // imageUrl: string = 'https://ionicframework.com/docs/img/demos/avatar.svg';
+  imageUrl: string = '../../../assets/profile.jpeg';
+  alt: string = `image-${this.title}`;
 
   constructor() { }
 
