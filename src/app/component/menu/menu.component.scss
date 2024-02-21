@@ -1,0 +1,17 @@
+.container-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+  background: var(--ion-color-step-500);
+}
+.content-menu{
+ min-width: 24px;
+ min-height: 24px;
+}
+.content-logo{
+  width: 50px;
+}
+.content-notification{
+
+}
