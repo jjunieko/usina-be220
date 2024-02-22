@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   overflow-y: auto;
+  max-height: 100vh;
   margin-bottom: 10px;
 }
 .container::-webkit-scrollbar {
@@ -9,6 +10,10 @@
 }
 
 .container-card {
+  display: grid;
+  align-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-top: 50px;
   padding-left: 30px;
 
@@ -26,7 +31,6 @@
     }
   }
 }
-
 
 .content-card-image {
   width: 300px;
@@ -83,6 +87,9 @@
     justify-content: center;
   }
 }
+ion-img::part(image) {
+  border-radius: 32px;
+}
 
 .overlay {
   position: absolute;
@@ -95,3 +102,8 @@
   filter: grayscale(100%);
 }
 
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}

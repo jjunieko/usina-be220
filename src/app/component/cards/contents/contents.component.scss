@@ -1,8 +1,25 @@
 .container-2 {
   display: flex;
+  width: 100%;
   flex-direction: row;
+  align-items: flex-end;
   overflow-y: auto;
   margin-bottom: 10px;
+  max-height: 100vh;
+  opacity: 0.5;
+
+  &.container-card-2 {
+    margin-top: 50px;
+    padding-left: 30px;
+
+    & .container-title {
+      text-align: start;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      padding: 0;
+    }
+  }
 }
 .container-2::-webkit-scrollbar {
   display: none;
@@ -28,15 +45,20 @@
 
 .content-card {
   width: 300px;
-  height: 300px;
-  position: relative;
+  height: 200px;
 }
 
 .content-orange {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   margin-left: 50px;
   margin-top: 50px;
   border-radius: 8px;
   background: orange;
+}
+
+@media screen and (min-width: 1024px) {
+  .container-2 {
+    max-width: 1024px;
+  }
 }

@@ -2,11 +2,11 @@
   <ng-container *ngFor="let item of mode; let first = first">
     <div class="container-card-programs">
       <div class="container-title-program">{{ item.title }}
-        <ion-span class="content-span-programs">{{item.newItem}}</ion-span>
+        <div *ngIf="first" class="content-span-programs">{{item.newItem}}</div>
       </div>
 
       <div class="content-card-image-programs">
-        <ion-img [src]="item.imageSrc" [alt]="item.imageAlt"></ion-img>
+        <ion-img [src]="item.imageSrc" [alt]="item.imageAlt" class="content-image"></ion-img>
         <div class="overlay"></div>
         <div class="content-card-image-title">
           <div>
@@ -20,4 +20,3 @@
     </div>
   </ng-container>
 </div>
-

@@ -1,8 +1,9 @@
-<ion-header>
+
+<ion-header id="main-content">
   <div class="container-header">
     <div class="content-header">
-      <div class="content-menu">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
+      <div class="content-menu" (click)="openMenu()">
+        <ion-icon name="menu-outline" size="large" ></ion-icon>
       </div>
       <div class="content-logo">
         <ion-img src="../../../assets/logo.png" alt="Shapes"></ion-img>
@@ -15,7 +16,37 @@
     <div class="content-profile">
       <app-profile></app-profile>
     </div>
-
   </div>
-
 </ion-header>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <h2>Select an overlay type:</h2>
+    <ion-radio-group [(ngModel)]="menuType">
+      <ion-item>
+        <ion-radio value="overlay">
+          <code>overlay</code>
+        </ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="reveal">
+          <code>reveal</code>
+        </ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="push">
+          <code>push</code>
+        </ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <br />
+    <ion-menu-toggle>
+      <ion-button class="content-button-close" >Click to close the menu</ion-button>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>

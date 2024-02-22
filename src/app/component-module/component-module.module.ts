@@ -10,7 +10,7 @@ import { ProgramsComponent } from '../component/cards/programs/programs.componen
 
 
 @NgModule({
-  declarations: [ProfileComponent, MenuComponent, CardsComponent, ProgramsComponent , ContentsComponent],
+  declarations: [ProfileComponent, MenuComponent, CardsComponent, ProgramsComponent, ContentsComponent],
   imports: [
     CommonModule,
     IonicModule

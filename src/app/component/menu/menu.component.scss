@@ -17,10 +17,14 @@
   min-height: 24px;
 }
 .content-logo {
-  width: 50px;
+  width: 100px;
+  height: 50px;
+  & ion-img {
+    width: 100px;
+    height: 34px;
+  }
 }
 .content-notification {
-
   & ion-icon {
     border-radius: 50%;
     color: orange;
@@ -44,11 +48,19 @@
   }
 }
 
-.content-profile{
+.content-profile {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   margin-left: 50px;
   background: var(--ion-color-step-150);
+}
+
+ion-img::part(image) {
+  border-radius: 12px;
+}
+.content-button-close {
+  --background: orange;
+  --background-activated: #e07a26;
 }

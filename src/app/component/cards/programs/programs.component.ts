@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/models/CardItems';
 
 @Component({
   selector: 'app-programs',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./programs.component.scss'],
 })
 export class ProgramsComponent implements OnInit {
-  mode: any = [
+  mode: Item[]= [
     {
       title: 'PROGRAMAS',
       icon: 'add-circle-outline',

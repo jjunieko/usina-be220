@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/models/CardItems';
 
 @Component({
   selector: 'app-cards',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent implements OnInit {
-  items: any = [
+  items: Item[] = [
     {
       title: 'PERSONAL ONLINE',
       icon: 'add-circle-outline',
@@ -33,10 +34,9 @@ export class CardsComponent implements OnInit {
     },
   ];
 
-
   constructor() { }
 
   ngOnInit() {
-   }
+  }
 
 }
