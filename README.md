@@ -4,12 +4,12 @@ projeto para criar test de design em ionic, angular e TS.
 
 ## Build
 
-``` bash  git clone repo ```
-``` bash  npm install ```
-``` bash  cd /pasta-projeto ```
-``` bash  ionic serve  ```
+```  git clone repo ```
+```  npm install ```
+```  cd /pasta-projeto ```
+```  ionic serve  ```
 
 ## Rodar TESTS
 
-``` bash  ng test ```
+``` ng test ```
 
