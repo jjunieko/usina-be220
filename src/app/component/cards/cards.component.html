@@ -1,22 +1,22 @@
-<div class="container">
-  <ng-container *ngFor="let item of items; let first = first">
-    <div class="container-card">
-      <ion-title>{{ item.title }}
-        <ion-icon name="{{ item.icon }}"></ion-icon>
-      </ion-title>
+  <div class="container">
+    <ng-container *ngFor="let item of items; let first = first">
+      <div class="container-card">
+        <div class="container-title-card">{{ item.title }}
+          <ion-icon name="{{ item.icon }}"></ion-icon>
+        </div>
 
-      <div class="content-card-image">
-        <ion-img [src]="item.imageSrc" [alt]="item.imageAlt"></ion-img>
-        <div class="overlay"></div>
-        <div class="content-card-image-title">
-          <div>
-            <ion-span [ngClass]="{'centered-text': first}">
-              <ion-icon *ngIf="first" name="{{ item.icon }}" size="large"></ion-icon> {{ item.subtitle }}
-            </ion-span>
-            {{ item.description }}
+        <div class="content-card-image">
+          <ion-img [src]="item.imageSrc" [alt]="item.imageAlt"></ion-img>
+          <div class="overlay"></div>
+          <div class="content-card-image-title">
+            <div>
+              <ion-span [ngClass]="{'centered-text': first}">
+                <ion-icon *ngIf="first" name="{{ item.icon }}" size="large"></ion-icon> {{ item.subtitle }}
+              </ion-span>
+              {{ item.description }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </ng-container>
-</div>
+    </ng-container>
+  </div>

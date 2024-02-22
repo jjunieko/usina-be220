@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss'],
 })
-export class CardsComponent  implements OnInit {
+export class CardsComponent implements OnInit {
   items: any = [
     {
       title: 'PERSONAL ONLINE',
@@ -13,7 +13,6 @@ export class CardsComponent  implements OnInit {
       imageSrc: '../../../assets/musculacao.jpg',
       imageAlt: `image`,
       subtitle: 'NOVO TREINO',
-      // description: 'LEVANTAMENTO DE PESO',
       isRegister: false,
     },
     {
@@ -30,12 +29,14 @@ export class CardsComponent  implements OnInit {
       imageAlt: `image`,
       subtitle: '',
       description: 'AEROBICA',
-      isRegister: true,
+      isRegister: false,
     },
   ];
 
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+   }
 
 }

@@ -1,34 +1,36 @@
-.container {
+.container-programs {
   display: flex;
   flex-direction: row;
   overflow-y: auto;
   margin-bottom: 10px;
 }
-.container::-webkit-scrollbar {
+.container-programs::-webkit-scrollbar {
   display: none;
 }
 
-.container-card {
+.container-card-programs {
   margin-top: 50px;
   padding-left: 30px;
 
-  & .container-title-card {
+  & .container-title-program {
     text-align: start;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
     padding: 0;
 
-    & ion-icon {
-      color: orange;
-      font-size: 22px;
-      // margin-bottom: 10px;
+    & span{
+      background: orange;
+      border-radius: 72px;
+      padding: 5px;
+      width: 40px;
+      font-size: 12px;
     }
   }
 }
 
 
-.content-card-image {
+.content-card-image-programs {
   width: 300px;
   height: auto;
   position: relative;
@@ -95,3 +97,10 @@
   filter: grayscale(100%);
 }
 
+.content-span-programs{
+  background: orange;
+  border-radius: 72px;
+  padding: 5px;
+  width: 40px;
+  font-size: 12px;
+}
