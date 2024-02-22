@@ -1,5 +1,6 @@
 .container-profile {
   display: flex;
+  margin-left: -20px;
 }
 .content-profile {
   display: flex;
@@ -28,7 +29,6 @@
   align-items: center;
   color: orange;
   height: 50px;
-  width: 100%;
   padding: 8px;
   border-radius: 24px;
   margin-top: 20px;
@@ -52,4 +52,10 @@
 
 .content-items-profile-icon{
   display: flex;
+  align-items: center;
+
+  & span{
+    font-size: 12px;
+    margin-left: 5px;
+  }
 }
