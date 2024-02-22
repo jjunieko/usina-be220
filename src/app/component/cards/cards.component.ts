@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Item } from 'src/models/CardItems';
+import { CardService } from 'src/services/card.services';
 
 @Component({
   selector: 'app-cards',
@@ -34,9 +36,12 @@ export class CardsComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  cards: Observable<Item[]> | any ;
+
+  constructor(private itemsService: CardService) {}
 
   ngOnInit() {
+    this.cards = this.itemsService.getTeacherOnline();
   }
 
 }

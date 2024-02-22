@@ -1,5 +1,5 @@
 <div class="container">
-  <ng-container *ngFor="let item of items; let first = first">
+  <ng-container *ngFor="let item of cards | async; let first = first">
     <div class="container-card">
       <div class="container-title-card">{{ item.title }}
         <ion-icon name="{{ item.icon }}"></ion-icon>

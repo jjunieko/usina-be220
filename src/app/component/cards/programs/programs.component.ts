@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Item } from 'src/models/CardItems';
+import { CardService } from 'src/services/card.services';
 
 @Component({
   selector: 'app-programs',
@@ -7,40 +9,12 @@ import { Item } from 'src/models/CardItems';
   styleUrls: ['./programs.component.scss'],
 })
 export class ProgramsComponent implements OnInit {
-  mode: Item[]= [
-    {
-      title: 'PROGRAMAS',
-      icon: 'add-circle-outline',
-      newItem: 'NOVO',
-      imageSrc: '../../../assets/musculacao2.jpeg',
-      imageAlt: `image`,
-      subtitle: 'Continuar treinamento',
-      description: 'LEVANTAMENTO DE PESO',
-      isRegister: false,
-    },
-    {
-      title: '',
-      icon: '',
-      imageSrc: '../../../assets/musculacao.jpg',
-      imageAlt: `image`,
-      subtitle: '',
-      description: 'YOGA Experimente',
-      isRegister: false,
-    },
-    {
-      title: '',
-      icon: '',
-      newItem: '',
-      imageSrc: '../../../assets/musculacao.jpg',
-      imageAlt: `image`,
-      subtitle: '',
-      description: 'YOGA Experimente',
-      isRegister: false,
-    },
-  ];
+  items!: Observable<Item[]>;
 
-  constructor() { }
+  constructor(private itemsService: CardService) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.items = this.itemsService.getItems();
+  }
 
 }

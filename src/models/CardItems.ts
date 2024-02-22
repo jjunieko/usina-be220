@@ -1,10 +1,10 @@
 export interface Item {
-  title: string;
+  title?: string;
   icon?: string;
   newItem?: string;
-  imageSrc: string;
-  imageAlt: string;
-  subtitle: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  subtitle?: string;
   description?: string;
-  isRegister: boolean;
+  isRegister?: boolean;
 }
