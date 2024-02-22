@@ -1,22 +1,23 @@
-
 <ion-header id="main-content">
-  <div class="container-header">
-    <div class="content-header">
-      <div class="content-menu" (click)="openMenu()">
-        <ion-icon name="menu-outline" size="large" ></ion-icon>
+  <ion-toolbar>
+    <div class="container-header">
+      <div class="content-header">
+        <div class="content-menu" (click)="openMenu()">
+          <ion-icon name="menu-outline" size="large"></ion-icon>
+        </div>
+        <div class="content-logo">
+          <ion-img src="../../../assets/logo.png" alt="Shapes"></ion-img>
+        </div>
+        <div class="content-notification">
+          <ion-icon name="notifications-outline" size="10"></ion-icon>
+        </div>
       </div>
-      <div class="content-logo">
-        <ion-img src="../../../assets/logo.png" alt="Shapes"></ion-img>
-      </div>
-      <div class="content-notification">
-        <ion-icon name="notifications-outline" size="10"></ion-icon>
-      </div>
-    </div>
 
-    <div class="content-profile">
-      <app-profile></app-profile>
+      <div class="content-profile">
+        <app-profile></app-profile>
+      </div>
     </div>
-  </div>
+  </ion-toolbar>
 </ion-header>
 
 <ion-menu contentId="main-content">
@@ -46,7 +47,7 @@
     </ion-radio-group>
     <br />
     <ion-menu-toggle>
-      <ion-button class="content-button-close" >Click to close the menu</ion-button>
+      <ion-button class="content-button-close">Click to close the menu</ion-button>
     </ion-menu-toggle>
   </ion-content>
 </ion-menu>
