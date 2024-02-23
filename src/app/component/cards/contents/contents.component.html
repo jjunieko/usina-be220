@@ -1,13 +1,16 @@
-<div class="container-2">
-  <ng-container *ngFor="let item of content;">
-    <div class="container-card-2">
-      <div class="container-title">{{ item.title }}</div>
-
-      <div class="content-border">
-        <div class="content-card">
-          <div class="content-orange"></div>
+<div class="swiper-container" #swiperContainer>
+  <div class="swiper-wrapper">
+    <div class="container-2">
+      <div class="swiper-slide" *ngFor="let item of content">
+        <div class="container-card-2">
+          <div class="container-title">{{ item.title }}</div>
+          <div class="content-border">
+            <div class="content-card">
+              <div class="content-orange"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </ng-container>
+  </div>
 </div>

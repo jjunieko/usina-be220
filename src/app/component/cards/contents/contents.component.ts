@@ -1,12 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Item } from 'src/models/CardItems';
+import Swiper from 'swiper';
+import { register } from 'swiper/element/bundle';
 
+register();
 @Component({
   selector: 'app-contents',
   templateUrl: './contents.component.html',
   styleUrls: ['./contents.component.scss'],
 })
 export class ContentsComponent implements OnInit {
+  @ViewChild('swiperContainer') swiperContainer: any;
+
   content: Item[]= [
     {
       title: 'CONTEÚDOS',
@@ -50,4 +55,15 @@ export class ContentsComponent implements OnInit {
 
   ngOnInit() { }
 
+  ngAfterViewInit() {
+    const swiper = new Swiper(this.swiperContainer.nativeElement, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
 }

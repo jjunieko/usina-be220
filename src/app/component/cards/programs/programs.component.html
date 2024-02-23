@@ -1,22 +1,27 @@
-<div class="container-programs">
-  <ng-container *ngFor="let item of items | async; let first = first">
-    <div class="container-card-programs">
-      <div class="container-title-program">{{ item.title }}
-        <div *ngIf="first" class="content-span-programs">{{item.newItem}}</div>
-      </div>
 
-      <div class="content-card-image-programs">
-        <ion-img [src]="item.imageSrc" [alt]="item.imageAlt" class="content-image"></ion-img>
-        <div class="overlay"></div>
-        <div class="content-card-image-title">
-          <div>
-            <ion-span>
-              {{ item.subtitle }}
-            </ion-span>
-            {{ item.description }}
+<div class="swiper-container" #swiperContainer>
+  <div class="swiper-wrapper">
+    <div class="container-programs">
+      <ng-container *ngFor="let item of items | async; let first = first">
+        <div class="container-card-programs">
+          <div class="container-title-program">{{ item.title }}
+            <div *ngIf="first" class="content-span-programs">{{item.newItem}}</div>
+          </div>
+
+          <div class="content-card-image-programs">
+            <ion-img [src]="item.imageSrc" [alt]="item.imageAlt" class="content-image"></ion-img>
+            <div class="overlay"></div>
+            <div class="content-card-image-title">
+              <div>
+                <ion-span>
+                  {{ item.subtitle }}
+                </ion-span>
+                {{ item.description }}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
     </div>
-  </ng-container>
+  </div>
 </div>
